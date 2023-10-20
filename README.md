@@ -1,3 +1,6 @@
+------------ GUILHERME ALVES CAVALVANTE MACEDO GARCIA ------------------
+
+
 -- Esse script junto ao HTML foram criados para organizar da maior para a menor importação dentro de uma classe PHP
 
 -- Basta colar no INPUT os "uses" com seus devidos ";"
@@ -29,3 +32,5 @@ use App\Util\Traits\DataTransformTrait;
 use App\Service\CustomSerializerService;
 use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
+
+----------- FIM -------------
