@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>String List Sorter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+    
+        h1 {
+            color: #333;
+        }
+    
+        #inputList {
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+            display: block;
+            padding: 10px;
+        }
+    
+        button {
+            display: block;
+            margin: 0 auto;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+    
+        button:hover {
+            background-color: #0056b3;
+        }
+    
+        h2 {
+            color: #333;
+        }
+    
+        pre {
+            display: inline-block;
+            padding: 10px;
+            background-color: #f0f0f0;
+            white-space: pre-line; /* Manter quebras de linha do texto */
+        }
+    </style>
+</head>
+<body>
+    <h1>String List Sorter</h1>
+    <textarea id="inputList" placeholder="Enter a list of strings..." rows="10" cols="50"></textarea>
+    <br>
+    <button onclick="sortList()">Sort List</button>
+    <br>
+    <h2>Sorted List:</h2>
+    <pre id="sortedList"></pre>
+
+    <script>
+        const lengthSelector = (str) => str.length;
+
+        function sortList() {
+            const inputList = document.getElementById("inputList").value;
+            const listArray = inputList.split('\n').filter(item => item.trim() !== ''); // Split by newline and remove empty items
+            listArray.sort((a, b) => lengthSelector(a) - lengthSelector(b)); // Sort by string length
+            const sortedList = listArray.join('\n'); // Join the sorted list back to a string
+            document.getElementById("sortedList").textContent = sortedList;
+        }
+    </script>
+</body>
+</html>
+
